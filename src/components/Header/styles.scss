@@ -1,0 +1,58 @@
+@use "../../scss/" as *;
+
+.header{
+    
+    width: calc(100vw - 8rem);
+    padding: 16rem;
+}
+
+.containerHeader{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .headerLogoText{
+        display: flex;
+        align-items: center;
+        grid-gap: 12rem;
+
+        img{
+            width: 38rem;
+            height: 48rem;
+        }
+
+        p{
+            @include fnt(14, 18, $weight: 500, $font: $fontText, $color: $gray-800);
+            max-width: 497rem;
+        }
+    }
+
+    .userHeaderContainer{
+        display: flex;
+        align-items: center;
+        grid-gap: 12rem;
+
+        .userName{
+            text-align: end;
+            @include fnt(14, 18, $weight: 400, $font: $fontText, $color: $gray-500);
+            .lastname{
+                @include fnt(14, 18, $weight: 600, $font: $fontText, $color: $gray-800);
+            }
+        }
+
+        .whiteButton{
+            flex-direction: row-reverse;
+            grid-gap: 4rem;
+            background-color: $white;
+            border: 1rem solid $gray-300;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            padding: 8rem;
+            border-radius: 8rem;
+
+            @include fnt(14, 20, $weight: 500, $font: $fontText, $color: $gray-700);
+            object{
+                margin-right: 0;
+            }
+        }
+    }
+}

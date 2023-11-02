@@ -1,0 +1,112 @@
+@use "../../../scss/" as *;
+
+.lifeSituationProcessContainer{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 4rem;
+
+        
+    .containerProcesses{
+        background-color: $gray-100;
+        border-radius: 12rem;
+        width: 100%;
+        position: relative;
+
+        .cardHeader{
+            display: flex;
+            flex-direction: column;
+            grid-gap: 4rem;
+        }
+
+        .cardFooter{
+            display: none;
+        }
+
+        .cardLifeSituationServices{
+            width: 70vw;
+            min-height: auto;
+
+           
+        }
+    }
+
+    .titleProcesses{
+        @include fnt(14, 18, $weight: 500, $color: $gray-800, $font: $fontUI);
+    }
+
+    .containerIdentProcesses{
+        display: flex;
+        grid-gap: 4rem;
+        .processesIdent{
+            @include fnt(14, 24, $weight: 400, $color: $gray-500, $font: $fontUI);
+        }
+        .processesStatus{
+            @include fnt(14, 24, $weight: 400, $color: $gray-800, $font: $fontUI);
+        }
+      
+    }
+    .processesDepartament{
+        @include fnt(14, 16, $weight: 400, $color: $gray-800, $font: $fontUI);
+    }
+
+    .linkProcesses{
+        display: flex;
+        max-width: 40%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        align-items: center;
+        grid-gap: 4rem;
+        @include fnt(14, 20, $weight: 400, $color: $blue-dark-500, $font: $fontUI);
+
+        img{
+            width: 16rem;
+            height: 16rem;
+            object-fit: contain;
+        }
+
+        &:hover{
+            max-width: 90%;
+            overflow: auto;
+        }
+    }
+
+    .footerCardPositon{
+        position: absolute;
+        right: 12rem;
+        bottom: 12rem;
+        display: flex;
+        grid-gap: 4rem;
+        z-index: 1;
+
+        .whiteIco{
+            
+            &:hover{
+                background-color: $wg-gray !important;
+            }
+        }
+    }
+
+    .buttonDataWhite{
+        background-color: $white;
+        padding: 4rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        border-radius: 12rem;
+        display: flex;
+        border: 1rem solid $gray-300;
+        flex-direction: row-reverse;
+        @include fnt(12, 16, $weight: 400, $color: $gray-700, $font: $fontUI);
+
+        object{
+            margin: 0;
+            width: 16rem;
+            height: 16rem;
+        }
+
+        &:hover{
+            background-color: $wg-gray;
+        }
+    }
+}
+

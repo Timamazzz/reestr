@@ -1,0 +1,148 @@
+@use "../../scss/" as *;
+
+
+.lifeCituationContainer{
+    margin-top: 16rem;
+    display: flex;
+    grid-gap: 4rem;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .lifeCituation{
+        display: flex;
+        grid-gap: 4rem;
+        width: 100%;
+    }
+
+    .lifeContinaerItem{
+        display: flex;
+       grid-gap: 4rem;
+
+        &.active{
+            width: 100%;
+        }
+    }
+
+    
+}
+
+.cardLifeSituation{
+    background-color: $gray-100;
+    border-radius: 12rem;
+    padding: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 160rem;
+    cursor: pointer;
+    min-height: 160rem;
+    transition: .3s linear;
+
+    .cardHeader{
+        height: 100%;
+    }
+
+    &:hover{
+        background-color: $gray-200;
+    }
+
+    .cardHeaderSubtitle{
+        @include fnt(12, 16, $weight: 400, $color: $gray-500, $font: $fontUI);
+    }
+    .cardHeaderTitle{
+        @include fnt(14, 18, $weight: 500, $color: $gray-800, $font: $fontUI)
+    }
+    .cardFooterNumber{
+        @include fnt(14, 16, $weight: 400, $color: $gray-500, $font: $fontUI)
+    }
+   
+   
+}
+
+.cardHeaderTitleType{
+    display: flex;
+    align-items: center;
+}
+.cardFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: all;
+
+    .footerRight{
+        display: flex;
+        grid-gap: 4rem;
+    }
+}
+
+.whiteIco{
+    padding: 4rem !important;
+    background-color: $white !important;
+    transition: .3s ease-in-out !important;
+    border-radius: 8rem !important;
+
+    &:hover{
+        background-color: $wg-gray !important;
+    }
+
+    object{
+        width: 16rem;
+        height: 16rem;
+        margin: 0;
+    }
+    
+}
+
+.lifeSituationServiceContainer{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12rem;
+
+    .whiteButtonAdd{
+        padding: 4rem;
+        border-radius: 12rem;
+        background-color: $white;
+        border: 1rem solid $blue-dark-200;
+        justify-content: start;
+        width: 246rem;
+        height: 24rem;
+        @include fnt(12, 16, $weight: 400, $color: $blue-dark-500, $font: $fontUI);
+
+        object{
+            width: 16rem;
+            height: 16rem;
+        }
+    }
+
+
+    &.flexGrid{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 12rem;
+    }
+    
+}
+
+.cardLifeSituationServices{
+    background-color: $gray-100;
+    border-radius: 12rem;
+    padding: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360rem;
+    min-height: 160rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    .cardHeader{
+        height: 100%;
+    }
+}
+
+.containerServiceProcesses{
+    display: flex;
+    grid-gap: 4rem;
+}
+
+

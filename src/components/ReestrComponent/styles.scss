@@ -1,0 +1,50 @@
+@use "../../scss" as *;
+
+.reestrComponent{
+    padding: 0 16rem;
+    width: calc(100vw - 8rem);
+
+    .reestrNav{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 396rem 1fr 244rem;
+        grid-gap: 8rem;
+        margin-bottom: 16rem;
+
+        .whiteButton{
+            background-color: $white;
+            border: 1rem solid var(--blue-dark-200, #B2CCFF);
+            border-radius: 8rem;
+            height: 36rem;
+            @include fnt(14, 20, $color: $blue-dark-500, $weight: 500)
+        }
+    }
+ 
+}
+
+.formMini{
+    .optionsContainer{
+        max-height: 130rem;
+    }
+}
+
+.modalButtonContainer{
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 8rem;
+    margin-top: 24rem;
+    .buttonModal{
+        width: 50%;
+        padding: 12rem;
+        border-radius: 8rem;
+
+        &_white{
+            width: 50%;
+            padding: 12rem;
+            border-radius: 8rem;
+            background-color: $white;
+            border: 1rem solid $gray-300;
+            color: $gray-700;
+        }
+    }
+}

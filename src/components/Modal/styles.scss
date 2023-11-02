@@ -1,0 +1,44 @@
+@use "../../scss/" as *;
+
+.modalContainerBg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: rgba(5, 13, 51, 0.05);
+    cursor: pointer;
+}
+
+.modal{
+    max-width: 408rem;
+    width: 100%;
+    border-radius: 12rem;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    padding: 24rem;
+    border-radius: 24rem;
+
+    .imgItem{
+        width: 100%;
+        height: 500rem;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .slick-dots{
+        bottom: 10rem;
+    }
+
+    .modalContainerGrid{
+        display: flex;
+        grid-gap: 16rem;
+        flex-direction: column;
+    }
+}
